@@ -307,7 +307,7 @@ export function setupOAuthCallbackServerWithLongPoll(options: OAuthCallbackServe
   })
 
   const server = app.listen(options.port, () => {
-    log(`OAuth callback server running at http://127.0.0.1:${options.port}`)
+    log(`OAuth callback server running at http://localhost:${options.port}`)
   })
 
   const waitForAuthCode = (): Promise<string> => {
@@ -416,7 +416,7 @@ export async function parseCommandLineArgs(args: string[], defaultPort: number, 
   }
 
   const url = new URL(serverUrl)
-  const isLocalhost = (url.hostname === 'localhost' || url.hostname === '127.0.0.1') && url.protocol === 'http:'
+  const isLocalhost = (url.hostname === 'localhost' || url.hostname === 'localhost') && url.protocol === 'http:'
 
   if (!(url.protocol == 'https:' || isLocalhost || allowHttp)) {
     log('Error: Non-HTTPS URLs are only allowed for localhost or when --allow-http flag is provided')

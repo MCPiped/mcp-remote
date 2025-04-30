@@ -1,6 +1,6 @@
 {
-  "name": "mcp-remote",
-  "version": "0.1.2",
+  "name": "mcpipe-remote",
+  "version": "0.0.1",
   "packageManager": "pnpm@8.15.1",
   "description": "Remote proxy for Model Context Protocol, allowing local-only clients to connect to remote servers using oAuth",
   "keywords": [
@@ -11,7 +11,7 @@
     "oauth"
   ],
   "author": "Glen Maddern <glen@cloudflare.com>",
-  "repository": "https://github.com/geelen/mcp-remote",
+  "repository": "https://github.com/MCPiped/mcp-remote",
   "type": "module",
   "files": [
     "dist",

@@ -47,7 +47,7 @@ export async function isLockValid(lockData: LockfileData): Promise<boolean> {
     const controller = new AbortController()
     const timeout = setTimeout(() => controller.abort(), 1000)
 
-    const response = await fetch(`http://127.0.0.1:${lockData.port}/wait-for-auth?poll=false`, {
+    const response = await fetch(`http://localhost:${lockData.port}/wait-for-auth?poll=false`, {
       signal: controller.signal,
     })
 
@@ -69,7 +69,7 @@ export async function waitForAuthentication(port: number): Promise<boolean> {
 
   try {
     while (true) {
-      const url = `http://127.0.0.1:${port}/wait-for-auth`
+      const url = `http://localhost:${port}/wait-for-auth`
       log(`Querying: ${url}`)
       const response = await fetch(url)
 
